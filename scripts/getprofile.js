@@ -39,7 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
               } else {
                 userProfile.isAdmin = false;
               }
-  
+              var img = document.getElementById('profileImage');
+              img.src = 'https://ugc.yeahgames.net/profile/p/default/png/@' + userProfile.username + '.png';
+              
               // Generate the profile card HTML based on the user's data
               var profileHTML = `
                 <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
@@ -74,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
               profileCard.innerHTML = profileHTML;
             })
+            
             .catch(function (error) {
               console.error("Error:", error);
               // Display an error message or handle the error gracefully
@@ -87,8 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Display an error message or handle the error gracefully
       });
 
-      var img = document.getElementById('profileImage');
-      img.src = 'https://ugc.yeahgames.net/profile/p/default/png/@' + userProfile.username + '.png';
+
 
 
   });
