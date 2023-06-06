@@ -40,7 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
               userProfile.isAdmin = false;
             }
             var img = document.getElementById('profileImage');
-            img.src = 'https://ugc.yeahgames.net/profile/p/default/png/@' + userProfile.username + '.png';
+            var url = 'https://ugc.yeahgames.net/profile/p/default/png/@' + userProfile.username + '.png';
+            var defaultUrl = 'https://ugc.yeahgames.net/profile/p/default/png/default.png';
+            img.onerror = function () {
+              img.src = defaultUrl;
+            };
+
+            img.src = url;
+
 
             var profileNameElement = document.getElementById('profileName');
             profileNameElement.textContent = userProfile.name;

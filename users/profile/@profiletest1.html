@@ -1275,16 +1275,19 @@ permalink: /@profiletest1
 
     if (userData && userData.username) {
       var authorizedUsername = userData.username;
+var imageUrl = 'https://ugc.yeahgames.net/profile/p/default/png/@' + authorizedUsername + '.png';
+var defaultImageUrl = 'https://ugc.yeahgames.net/profile/p/default/png/default.png'; 
 
-      var imageUrl = 'https://ugc.yeahgames.net/profile/p/default/png/@' + authorizedUsername + '.png';
+var imgElement = document.getElementById('accountPfp');
+if (imgElement) {
+  imgElement.onerror = function() {
+    imgElement.src = defaultImageUrl;
+  };
+  imgElement.src = imageUrl;
+} else {
+  console.log('img element with ID "accountPfp" not found.');
+}
 
-      var imgElement = document.getElementById('accountPfp');
-      if (imgElement) {
-        imgElement.src = imageUrl;
-      } else {
-        console.log('img element with ID "accountPfp" not found.');
-      }
-    }
   </script>
 
 
