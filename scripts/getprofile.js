@@ -65,6 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
             var profileAboutElement = document.getElementById('profileAbout');
             profileAboutElement.textContent = userProfile.about;
 
+            var profileLocationElement = document.getElementById('profileLocation');
+            profileLocationElement.textContent = userProfile.location;
+
             var profileEmailElement = document.getElementById('profileEmail');
             profileEmailElement.innerHTML = emailDiv;
 
