@@ -1,4 +1,5 @@
 ---
 layout: profile
-permalink: /@profiletest1disabled
+permalink: /@profiletest1
+joindate: 06-06-2023
 ---
