@@ -47,6 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             var emailDiv = '<a class="c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE" href="mailto:' + userProfile.email + '">' + userProfile.email + '</a>';
 
+            var websiteDiv = '<a style="color:#ff4747" title="This user\'s website." href="' + userProfile.website + '">' + userProfile.website.replace("https://", "") + '</a>'; 
+
             var img = document.getElementById('profileImage');
             var url = 'https://ugc.yeahgames.net/profile/p/default/png/@' + userProfile.username + '.png';
             var defaultUrl = 'https://ugc.yeahgames.net/profile/p/default/png/default.png';
@@ -70,6 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             var profileEmailElement = document.getElementById('profileEmail');
             profileEmailElement.innerHTML = emailDiv;
+
+            var profileWebsiteElement = document.getElementById('profileWebsite');
+            profileWebsiteElement.innerHTML = websiteDiv;
 
           })
 
