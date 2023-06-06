@@ -45,6 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
               userProfile.isAdmin = false;
             }
 
+            var emailDiv = '<a class="c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE" href="mailto:' + userProfile.email + '">' + userProfile.email + '</a>';
+
             var img = document.getElementById('profileImage');
             var url = 'https://ugc.yeahgames.net/profile/p/default/png/@' + userProfile.username + '.png';
             var defaultUrl = 'https://ugc.yeahgames.net/profile/p/default/png/default.png';
@@ -62,6 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             var profileAboutElement = document.getElementById('profileAbout');
             profileAboutElement.textContent = userProfile.about;
+
+            var profileEmailElement = document.getElementById('profileEmail');
+            profileEmailElement.innerHTML = emailDiv;
 
           })
 
