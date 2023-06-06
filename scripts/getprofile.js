@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
             img.src = url;
 
             var profileNameElement = document.getElementById('profileName');
-            profileNameElement.textContent = userProfile.name;
+            profileNameElement.innerHTML = userProfile.name;
 
             var profileUsernameElement = document.getElementById('profileUsername');
             profileUsernameElement.textContent = '@' + userProfile.username;
