@@ -92,8 +92,9 @@
       .then(function (profileData) {
         // Retrieve the user's profile based on the permalink (username)
         var permalink = window.location.pathname.replace("/", "");
+        var username = permalink.replace("@", ""); // Remove the "@" symbol
         var userProfile = profileData.find(function (profile) {
-          return profile.username === permalink;
+          return profile.username === username;
         });
   
         if (userProfile) {
@@ -161,5 +162,6 @@
         // Display an error message or handle the error gracefully
       });
   });
+  
   
   </script>

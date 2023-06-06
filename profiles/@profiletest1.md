@@ -1,4 +1,4 @@
 ---
 layout: profile
-permalink: /profiletest1
+permalink: /@profiletest1
 ---
