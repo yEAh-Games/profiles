@@ -87,3 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Display an error message or handle the error gracefully
       });
   });
+
+  var img = document.getElementById('profileImage');
+  img.src = 'https://ugc.yeahgames.net/profile/p/default/png/@' + userProfile.username + '.png';
