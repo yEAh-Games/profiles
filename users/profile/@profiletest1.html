@@ -1272,24 +1272,23 @@ permalink: /@profiletest1
   <script src="https://accounts.yeahgames.net/system/validation/main.js" defer></script>
   <script defer>
     var userData = validateUserDataFromCookie();
-
+  
     if (userData && userData.username) {
       var authorizedUsername = userData.username;
-var imageUrl = 'https://ugc.yeahgames.net/profile/p/default/png/@' + authorizedUsername + '.png';
-var defaultImageUrl = 'https://ugc.yeahgames.net/profile/p/default/png/default.png'; 
-
-var imgElement = document.getElementById('accountPfp');
-if (imgElement) {
-  imgElement.onerror = function() {
-    imgElement.src = defaultImageUrl;
-  };
-  imgElement.src = imageUrl;
-} else {
-  console.log('img element with ID "accountPfp" not found.');
-}
-
-  </script>
-
+      var imageUrl = 'https://ugc.yeahgames.net/profile/p/default/png/@' + authorizedUsername + '.png';
+      var defaultImageUrl = 'https://ugc.yeahgames.net/profile/p/default/png/default.png';
+  
+      var imgElement = document.getElementById('accountPfp');
+      if (imgElement) {
+        imgElement.onerror = function () {
+          imgElement.src = defaultImageUrl;
+        };
+        imgElement.src = imageUrl;
+      } else {
+        console.log('img element with ID "accountPfp" not found.');
+      }
+    }
+  </script>  
 
 </body>
 

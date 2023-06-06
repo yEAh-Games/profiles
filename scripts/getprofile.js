@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             profileNameElement.textContent = userProfile.name;
 
             var profileUsernameElement = document.getElementById('profileUsername');
-            profileUsernameElement.textContent = userProfile.username;
+            profileUsernameElement.textContent = '@' + userProfile.username;
 
           })
 
