@@ -820,6 +820,7 @@ permalink: /@profiletest1
                   id="profileImage">
                 <div>
                   <h2 id="profileName" class="vyo_A8gnQD1QWDPglr3h IOPhczRgtphv6NdNBDjj OyABRrnTV_kvHV7dJ0uE"></h2>
+                  <h3 id="profileUsername" style="font-size:14px;color:#ff4747;padding-bottom:0.3em"></h3>
                   <ul class="gC_jEY75u_oxfOOKnLpH wezTbYJgxYJp5ZDqX67N">
                     <li
                       class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 c8dCx6gnV43hTOLV6ks5 _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">
@@ -1267,15 +1268,15 @@ permalink: /@profiletest1
 
   <script src="../../app.bundle.js"></script>
   <script src="/scripts/getprofile.js"></script>
-  <script src="https://accounts.yeahgames.net/system/all/sha256.js"></script>
-  <script src="https://accounts.yeahgames.net/system/validation/main.js"></script>
-  <script>
+  <script src="https://accounts.yeahgames.net/system/all/sha256.js" defer></script>
+  <script src="https://accounts.yeahgames.net/system/validation/main.js" defer></script>
+  <script defer>
     var userData = validateUserDataFromCookie();
 
     if (userData && userData.username) {
       var authorizedUsername = userData.username;
 
-      var imageUrl = 'https://accounts.yeahgames.net/img/' + authorizedUsername;
+      var imageUrl = 'https://ugc.yeahgames.net/profile/p/default/png/@' + authorizedUsername + '.png';
 
       var imgElement = document.getElementById('accountPfp');
       if (imgElement) {

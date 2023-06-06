@@ -45,6 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
             var profileNameElement = document.getElementById('profileName');
             profileNameElement.textContent = userProfile.name;
 
+            var profileUsernameElement = document.getElementById('profileUsername');
+            profileUsernameElement.textContent = userProfile.username;
+
           })
 
           .catch(function (error) {
