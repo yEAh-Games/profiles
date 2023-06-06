@@ -81,7 +81,7 @@
     var profileCard = document.getElementById("profile-card");
   
     // Fetch the user's profile data from the JSON database
-    fetch("https://accounts.yeahgames.net/data/settings/profile.json")
+    fetch("https://accounts.yeahgames.net/data/settings/profiles.json")
       .then(function (response) {
         if (response.ok) {
           return response.json();
