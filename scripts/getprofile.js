@@ -60,6 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
             var profileUsernameElement = document.getElementById('profileUsername');
             profileUsernameElement.textContent = '@' + userProfile.username;
 
+            var profileAboutElement = document.getElementById('profileAbout');
+            profileAboutElement.textContent = userProfile.about;
+
           })
 
           .catch(function (error) {
