@@ -81,7 +81,7 @@
     var profileCard = document.getElementById("profile-card");
   
     // Fetch the user's profile data from the JSON database
-    fetch("https://accounts.yeahgames.net/data/settings/profiles.json")
+    fetch("https://accounts.yeahgames.net/data/settings/profile.json")
       .then(function (response) {
         if (response.ok) {
           return response.json();
@@ -114,6 +114,8 @@
   
               if (userAccount && userAccount.admin) {
                 userProfile.isAdmin = true;
+              } else {
+                userProfile.isAdmin = false;
               }
   
               // Generate the profile card HTML based on the user's data
@@ -158,5 +160,6 @@
         console.error("Error:", error);
         // Display an error message or handle the error gracefully
       });
-  });  
+  });
+  
   </script>
