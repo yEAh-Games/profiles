@@ -438,8 +438,8 @@ permalink: /@profiletest1
                 class="YRrCJSr_j5nopfm4duUc c8dCx6gnV43hTOLV6ks5 RwT9RGumnuqUj7lx7fdb RpVwy4sO7Asb86CncKJ_ _dylIDxYTN3qgvD4U597 KLtw3_OqL54e_zEQU_yi ICV24pqO8p1LJm4GEOgS"
                 id="user-menu-button-2" aria-expanded="false" data-dropdown-toggle="dropdown-2">
                 <span class="_DVAfiyo21kM68EUVzEQ">Open user menu</span>
-                <img class="yNvZ2JlUalNo5uPPv1sf mWvJQyBFgwNGEt0h7bSP RpVwy4sO7Asb86CncKJ_"
-                  src="../../images/users/neil-sims.png" alt="user photo">
+                <img class="yNvZ2JlUalNo5uPPv1sf mWvJQyBFgwNGEt0h7bSP RpVwy4sO7Asb86CncKJ_" id="accountPfp"
+                  src="https://ugc.yeahgames.net/profile/p/default/png/default.png" alt="user photo">
               </button>
             </div>
 
@@ -805,7 +805,8 @@ permalink: /@profiletest1
       <main>
 
         <div
-          class="xCPtuxM4_gihvpPwv9bX Nu4HUn5EQpnNJ1itNkrd RZmKBZs1E1eXw8vkE6jY mlwbuv_bMkMhzTA3msA3 sIk4Wc5VFaQpncPF5Sx4 AWLGIryfLKwkSeUZd4O6" style="padding-top:0rem !important;">
+          class="xCPtuxM4_gihvpPwv9bX Nu4HUn5EQpnNJ1itNkrd RZmKBZs1E1eXw8vkE6jY mlwbuv_bMkMhzTA3msA3 sIk4Wc5VFaQpncPF5Sx4 AWLGIryfLKwkSeUZd4O6"
+          style="padding-top:0rem !important;">
           <div class="EWLTGduHCjFnjN6tLCXV hD0sTTDgbxakubcHVW2X QzGxlDe4W0Kn6V1Dkd6r">
 
 
@@ -815,7 +816,8 @@ permalink: /@profiletest1
             <div
               class="_wYiJGbRZyFZeCc8y7Sf hD0sTTDgbxakubcHVW2X _Ybd3WwuTVljUT4vEaM3 mveJTCIb2WII7J4sY22F mngKhi_Rv06PF57lblDI _YxZw_O8dWkTljptcO7z SWDELhWFjL8JxEtm91_o _1jTZ8KXRZul60S6czNi">
               <div class="rvdRhGyExrNYTA6euxsF xu6Xcz2CnxX04u4eQAne SQf297smyJVNzzOO3iQL LvH1cgobxEYMRPVAp8WW">
-                <img class="TR_P65x9ie7j6uxFo_Cs XO0Hd72IH1CH2AVjcbWM v2F5G_Fm6X1wxdNJdQlJ mveJTCIb2WII7J4sY22F" id="profileImage">
+                <img class="TR_P65x9ie7j6uxFo_Cs XO0Hd72IH1CH2AVjcbWM v2F5G_Fm6X1wxdNJdQlJ mveJTCIb2WII7J4sY22F"
+                  id="profileImage">
                 <div>
                   <h2 id="profileName" class="vyo_A8gnQD1QWDPglr3h IOPhczRgtphv6NdNBDjj OyABRrnTV_kvHV7dJ0uE"></h2>
                   <ul class="gC_jEY75u_oxfOOKnLpH wezTbYJgxYJp5ZDqX67N">
@@ -1265,8 +1267,26 @@ permalink: /@profiletest1
 
   <script src="../../app.bundle.js"></script>
   <script src="/scripts/getprofile.js"></script>
+  <script src="https://accounts.yeahgames.net/system/all/sha256.js"></script>
+  <script src="https://accounts.yeahgames.net/system/validation/main.js"></script>
+  <script>
+    var userData = validateUserDataFromCookie();
+
+    if (userData && userData.username) {
+      var authorizedUsername = userData.username;
+
+      var imageUrl = 'https://accounts.yeahgames.net/img/' + authorizedUsername;
+
+      var imgElement = document.getElementById('accountPfp');
+      if (imgElement) {
+        imgElement.src = imageUrl;
+      } else {
+        console.log('img element with ID "accountPfp" not found.');
+      }
+    }
+  </script>
+
 
 </body>
-<!-- Mirrored from yeahgames.net/application-ui/demo/users/profile/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 06 Jun 2023 01:22:48 GMT -->
 
 </html>
