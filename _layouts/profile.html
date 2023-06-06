@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <title>{{page.permalink | remove: '/'}}'s profile | yEAh Accounts</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
-
+  <link rel="stylesheet" href="https://accounts.yeahgames.net/api/general/accountloader.css"
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
@@ -25,10 +25,13 @@
       document.documentElement.classList.remove('v2fLMH8w3xgUEQcl63H9')
     }
   </script>
+
 </head>
 
 <body class="jtAJHOc7mn7b4IKRO59D _1jTZ8KXRZul60S6czNi">
-
+  <div class="loading-overlay">
+    <div class="loader"></div>
+  </div>
   <nav
     class="_LPVUrp9Uina5fcERqWC taX5bm_AMmfFooXEd5Ny t6gkcSf0Bt4MLItXvDJ_ _Ybd3WwuTVljUT4vEaM3 EpUSgjHdM6oyMXUiK_8_ qUWbS_LTZujDB4XCd11V _1jTZ8KXRZul60S6czNi _fGhMnSfYmaGrv7DvZ00">
     <div class="i8v96MUlFwGv9qJUkAx7 _Cj_M6jt2eLjDgkBBNgI wekyMYEi8zByMSCgzHQ_ W3VHmE2jAiCd1MN9SdsH">
@@ -262,7 +265,7 @@
             </a>
           </div>
 
-        
+
 
           <div
             class="_SmdlCf6eUKB_V9S5IDj wBVMFkIGfrKshbvi2gS1 bXWhrLpoBVu4aMI8XQxr Jq3rRDG6Hsr3eAZ0KJeH aJF41JQLhtfw_MCGt5Th ZhzOGpbwY0R4TKKYr5pG d3C8uAdJKNl1jzfE9ynq xdunzYpzbwcYs_0Tjgcz _Ybd3WwuTVljUT4vEaM3 Y3FxyuXtj2gecrGXvLEI Zy1Pypi71Xu6guex6urN z30cepEEBLSTPSvWeVPH cl0mFvgyErwMYM5aRkru jqg6J89cvxmDiFpnV56r PoeKYEQfG4WfmL9xM6vu"
@@ -417,16 +420,22 @@
                 </p>
               </div>
               <ul class="_bVaO2NfVVP88LtHWYlv" role="none">
-                <a href="https://settings.yeahgames.net" class="_Vb9igHms0hI1PQcvp_S b9aD6g2qw84oyZNsMO8j RZmKBZs1E1eXw8vkE6jY c8dCx6gnV43hTOLV6ks5 rYHHksRBEMl_guI3q0UQ _7KA5gD55t2lxf9Jkj20 EJIoL6514Ry8r7nh011L RzANcaqunVvlLrO6_tal dMTOiA3mf3FTjlHu6DqW" role="menuitem">Settings</a>
+                <a href="https://settings.yeahgames.net"
+                  class="_Vb9igHms0hI1PQcvp_S b9aD6g2qw84oyZNsMO8j RZmKBZs1E1eXw8vkE6jY c8dCx6gnV43hTOLV6ks5 rYHHksRBEMl_guI3q0UQ _7KA5gD55t2lxf9Jkj20 EJIoL6514Ry8r7nh011L RzANcaqunVvlLrO6_tal dMTOiA3mf3FTjlHu6DqW"
+                  role="menuitem">Settings</a>
                 </li>
                 <li>
-                <a href="httos://members.yeahgames.net/my" class="_Vb9igHms0hI1PQcvp_S b9aD6g2qw84oyZNsMO8j RZmKBZs1E1eXw8vkE6jY c8dCx6gnV43hTOLV6ks5 rYHHksRBEMl_guI3q0UQ _7KA5gD55t2lxf9Jkj20 EJIoL6514Ry8r7nh011L RzANcaqunVvlLrO6_tal dMTOiA3mf3FTjlHu6DqW" role="menuitem">Profile</a>
+                  <a href="httos://members.yeahgames.net/my"
+                    class="_Vb9igHms0hI1PQcvp_S b9aD6g2qw84oyZNsMO8j RZmKBZs1E1eXw8vkE6jY c8dCx6gnV43hTOLV6ks5 rYHHksRBEMl_guI3q0UQ _7KA5gD55t2lxf9Jkj20 EJIoL6514Ry8r7nh011L RzANcaqunVvlLrO6_tal dMTOiA3mf3FTjlHu6DqW"
+                    role="menuitem">Profile</a>
                 </li>
                 <li>
-                <a href="https://accounts.yeahgames.net/logout?continue={{page.url}}" class="_Vb9igHms0hI1PQcvp_S b9aD6g2qw84oyZNsMO8j RZmKBZs1E1eXw8vkE6jY c8dCx6gnV43hTOLV6ks5 rYHHksRBEMl_guI3q0UQ _7KA5gD55t2lxf9Jkj20 EJIoL6514Ry8r7nh011L RzANcaqunVvlLrO6_tal dMTOiA3mf3FTjlHu6DqW" role="menuitem">Log out</a>
+                  <a href="https://accounts.yeahgames.net/logout?continue={{page.url}}"
+                    class="_Vb9igHms0hI1PQcvp_S b9aD6g2qw84oyZNsMO8j RZmKBZs1E1eXw8vkE6jY c8dCx6gnV43hTOLV6ks5 rYHHksRBEMl_guI3q0UQ _7KA5gD55t2lxf9Jkj20 EJIoL6514Ry8r7nh011L RzANcaqunVvlLrO6_tal dMTOiA3mf3FTjlHu6DqW"
+                    role="menuitem">Log out</a>
                 </li>
-                </ul>
-              
+              </ul>
+
             </div>
           </div>
         </div>
@@ -471,10 +480,10 @@
                   <span class="oA7zcT_42jVeFuWTXQnq" sidebar-toggle-item="">Dashboard</span>
                 </a>
               </li>
-          
-            
 
-            
+
+
+
               <li>
                 <button type="button"
                   class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 FJRldeiG2gFGZfuKgp88 t6gkcSf0Bt4MLItXvDJ_ d3C8uAdJKNl1jzfE9ynq _43MO1gcdi2Y0RJW1uHL __9sbu0yrzdhGIkLWNXl mveJTCIb2WII7J4sY22F bcsWqjK52oeyT6oeC2Az gZ3KuFw1JESHhOJhjT8j BpcA_ZTX79XDgSc71n2v _7KA5gD55t2lxf9Jkj20 duXR6Hcu_44X_243WcOl OPrb_iG5WDy_7F05BDOX"
@@ -492,27 +501,32 @@
                 <ul id="dropdown-users" class="TVHgSaRh3muGJct_epr9 b9aD6g2qw84oyZNsMO8j">
                   <li>
                     <a href="https://accounts.yeahgames.net/login?continue={{page.url}}"
-                      class="d3C8uAdJKNl1jzfE9ynq __9sbu0yrzdhGIkLWNXl _43MO1gcdi2Y0RJW1uHL mveJTCIb2WII7J4sY22F YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 FJRldeiG2gFGZfuKgp88 BpcA_ZTX79XDgSc71n2v _7KA5gD55t2lxf9Jkj20 bcsWqjK52oeyT6oeC2Az gZ3KuFw1JESHhOJhjT8j xfuvbLgYErj_fGTMHhLc duXR6Hcu_44X_243WcOl OPrb_iG5WDy_7F05BDOX"><i class="fa-solid fa-key"></i>&#160;Log in</a>
+                      class="d3C8uAdJKNl1jzfE9ynq __9sbu0yrzdhGIkLWNXl _43MO1gcdi2Y0RJW1uHL mveJTCIb2WII7J4sY22F YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 FJRldeiG2gFGZfuKgp88 BpcA_ZTX79XDgSc71n2v _7KA5gD55t2lxf9Jkj20 bcsWqjK52oeyT6oeC2Az gZ3KuFw1JESHhOJhjT8j xfuvbLgYErj_fGTMHhLc duXR6Hcu_44X_243WcOl OPrb_iG5WDy_7F05BDOX"><i
+                        class="fa-solid fa-key"></i>&#160;Log in</a>
                   </li>
                   <li>
                     <a href="https://accounts.yeahgames.net/logout"
-                      class="d3C8uAdJKNl1jzfE9ynq __9sbu0yrzdhGIkLWNXl _43MO1gcdi2Y0RJW1uHL mveJTCIb2WII7J4sY22F YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 FJRldeiG2gFGZfuKgp88 BpcA_ZTX79XDgSc71n2v _7KA5gD55t2lxf9Jkj20 bcsWqjK52oeyT6oeC2Az gZ3KuFw1JESHhOJhjT8j xfuvbLgYErj_fGTMHhLc duXR6Hcu_44X_243WcOl OPrb_iG5WDy_7F05BDOX"><i class="fa-solid fa-right-from-bracket"></i>&#160;Log out</a>
+                      class="d3C8uAdJKNl1jzfE9ynq __9sbu0yrzdhGIkLWNXl _43MO1gcdi2Y0RJW1uHL mveJTCIb2WII7J4sY22F YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 FJRldeiG2gFGZfuKgp88 BpcA_ZTX79XDgSc71n2v _7KA5gD55t2lxf9Jkj20 bcsWqjK52oeyT6oeC2Az gZ3KuFw1JESHhOJhjT8j xfuvbLgYErj_fGTMHhLc duXR6Hcu_44X_243WcOl OPrb_iG5WDy_7F05BDOX"><i
+                        class="fa-solid fa-right-from-bracket"></i>&#160;Log out</a>
                   </li>
                   <li>
                     <a href="https://accounts.yeahgames.net/create"
-                      class="d3C8uAdJKNl1jzfE9ynq __9sbu0yrzdhGIkLWNXl _43MO1gcdi2Y0RJW1uHL mveJTCIb2WII7J4sY22F YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 FJRldeiG2gFGZfuKgp88 BpcA_ZTX79XDgSc71n2v _7KA5gD55t2lxf9Jkj20 bcsWqjK52oeyT6oeC2Az gZ3KuFw1JESHhOJhjT8j xfuvbLgYErj_fGTMHhLc duXR6Hcu_44X_243WcOl OPrb_iG5WDy_7F05BDOX"><i class="fa-solid fa-plus-square"></i>&#160;Create an account</a>
+                      class="d3C8uAdJKNl1jzfE9ynq __9sbu0yrzdhGIkLWNXl _43MO1gcdi2Y0RJW1uHL mveJTCIb2WII7J4sY22F YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 FJRldeiG2gFGZfuKgp88 BpcA_ZTX79XDgSc71n2v _7KA5gD55t2lxf9Jkj20 bcsWqjK52oeyT6oeC2Az gZ3KuFw1JESHhOJhjT8j xfuvbLgYErj_fGTMHhLc duXR6Hcu_44X_243WcOl OPrb_iG5WDy_7F05BDOX"><i
+                        class="fa-solid fa-plus-square"></i>&#160;Create an account</a>
                   </li>
                   <li>
                     <a href="https://settings.yeahgames.net"
-                      class="d3C8uAdJKNl1jzfE9ynq __9sbu0yrzdhGIkLWNXl _43MO1gcdi2Y0RJW1uHL mveJTCIb2WII7J4sY22F YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 FJRldeiG2gFGZfuKgp88 BpcA_ZTX79XDgSc71n2v _7KA5gD55t2lxf9Jkj20 bcsWqjK52oeyT6oeC2Az gZ3KuFw1JESHhOJhjT8j xfuvbLgYErj_fGTMHhLc duXR6Hcu_44X_243WcOl OPrb_iG5WDy_7F05BDOX"><i class="fa-solid fa-gear"></i>&#160;Settings</a>
+                      class="d3C8uAdJKNl1jzfE9ynq __9sbu0yrzdhGIkLWNXl _43MO1gcdi2Y0RJW1uHL mveJTCIb2WII7J4sY22F YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 FJRldeiG2gFGZfuKgp88 BpcA_ZTX79XDgSc71n2v _7KA5gD55t2lxf9Jkj20 bcsWqjK52oeyT6oeC2Az gZ3KuFw1JESHhOJhjT8j xfuvbLgYErj_fGTMHhLc duXR6Hcu_44X_243WcOl OPrb_iG5WDy_7F05BDOX"><i
+                        class="fa-solid fa-gear"></i>&#160;Settings</a>
                   </li>
                   <li>
                     <a href="https://members.yeahgames.net"
-                      class="d3C8uAdJKNl1jzfE9ynq __9sbu0yrzdhGIkLWNXl _43MO1gcdi2Y0RJW1uHL mveJTCIb2WII7J4sY22F YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 FJRldeiG2gFGZfuKgp88 BpcA_ZTX79XDgSc71n2v _7KA5gD55t2lxf9Jkj20 bcsWqjK52oeyT6oeC2Az gZ3KuFw1JESHhOJhjT8j xfuvbLgYErj_fGTMHhLc duXR6Hcu_44X_243WcOl OPrb_iG5WDy_7F05BDOX _9dH7mrOkzM4RTmidHTs jqg6J89cvxmDiFpnV56r"><i class="fa-solid fa-address-card"></i>&#160;Profiles</a>
+                      class="d3C8uAdJKNl1jzfE9ynq __9sbu0yrzdhGIkLWNXl _43MO1gcdi2Y0RJW1uHL mveJTCIb2WII7J4sY22F YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 FJRldeiG2gFGZfuKgp88 BpcA_ZTX79XDgSc71n2v _7KA5gD55t2lxf9Jkj20 bcsWqjK52oeyT6oeC2Az gZ3KuFw1JESHhOJhjT8j xfuvbLgYErj_fGTMHhLc duXR6Hcu_44X_243WcOl OPrb_iG5WDy_7F05BDOX _9dH7mrOkzM4RTmidHTs jqg6J89cvxmDiFpnV56r"><i
+                        class="fa-solid fa-address-card"></i>&#160;Profiles</a>
                   </li>
                 </ul>
               </li>
-           
+
               <li>
                 <a href="https://admin.yeahgames.net" title="The admin dashboard homepage."
                   class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 FJRldeiG2gFGZfuKgp88 d3C8uAdJKNl1jzfE9ynq _43MO1gcdi2Y0RJW1uHL __9sbu0yrzdhGIkLWNXl mveJTCIb2WII7J4sY22F _7KA5gD55t2lxf9Jkj20 BpcA_ZTX79XDgSc71n2v duXR6Hcu_44X_243WcOl OPrb_iG5WDy_7F05BDOX">
@@ -534,7 +548,7 @@
                 </svg>
                 <span class="oA7zcT_42jVeFuWTXQnq" sidebar-toggle-item="">Docs</span>
               </a>
-             
+
               <a href="mailto:dashboard@yeahgames.net" target="_blank"
                 class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 FJRldeiG2gFGZfuKgp88 d3C8uAdJKNl1jzfE9ynq _43MO1gcdi2Y0RJW1uHL __9sbu0yrzdhGIkLWNXl mveJTCIb2WII7J4sY22F bcsWqjK52oeyT6oeC2Az gZ3KuFw1JESHhOJhjT8j _7KA5gD55t2lxf9Jkj20 BpcA_ZTX79XDgSc71n2v duXR6Hcu_44X_243WcOl OPrb_iG5WDy_7F05BDOX">
                 <svg
@@ -630,12 +644,13 @@
                       Email address
                     </div>
                     <div id="profileEmail"></div>
-                    
+
                     <div class="XJih04pKHf8Cekga6Hj3">
                       Homepage
                     </div>
                     <div
-                      class="TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE" id="profileWebsite">
+                      class="TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE"
+                      id="profileWebsite">
                     </div>
                   </address>
                 </div>
@@ -650,7 +665,7 @@
                   </p>
                 </div>
               </div>
-              
+
             </div>
             <div
               class="_wYiJGbRZyFZeCc8y7Sf hD0sTTDgbxakubcHVW2X _Ybd3WwuTVljUT4vEaM3 mveJTCIb2WII7J4sY22F mngKhi_Rv06PF57lblDI _YxZw_O8dWkTljptcO7z SWDELhWFjL8JxEtm91_o _1jTZ8KXRZul60S6czNi">
@@ -870,7 +885,13 @@
       });
     });
   </script>
-
+  <script>
+    window.addEventListener('load', function () {
+      var loaderOverlay = document.querySelector('.loading-overlay');
+      loaderOverlay.style.display = 'none';
+    });
+  </script>
+  </script>
 </body>
 
 </html>
