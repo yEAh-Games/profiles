@@ -86,7 +86,10 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Error:", error);
         // Display an error message or handle the error gracefully
       });
+
+      var img = document.getElementById('profileImage');
+      img.src = 'https://ugc.yeahgames.net/profile/p/default/png/@' + userProfile.username + '.png';
+
+
   });
 
-  var img = document.getElementById('profileImage');
-  img.src = 'https://ugc.yeahgames.net/profile/p/default/png/@' + userProfile.username + '.png';
