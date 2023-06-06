@@ -1,6 +1,8 @@
 ---
 permalink: /@profiletest1
 joindate: 12-09-2023
+employee: true
+verified: true
 ---
 
 <!DOCTYPE html>
@@ -821,23 +823,14 @@ joindate: 12-09-2023
                   id="profileImage">
                 <div>
                   <h2 id="profileName" class="vyo_A8gnQD1QWDPglr3h IOPhczRgtphv6NdNBDjj OyABRrnTV_kvHV7dJ0uE"></h2>
-                  <div id="profileAdmin"></div>
+                  <div id="profileAdmin"></div> {% if page.employee %}&#160;<svg
+                    class="YIUegm7fh_CpJbivTu6B MnxxlQlR1H0xJuMEE8Yr PeR2JZ9BZHYIH8Ea3F36 bcsWqjK52oeyT6oeC2Az gZ3KuFw1JESHhOJhjT8j _Oyukq8JlN1X9w2FmPds XIIs8ZOri3wm8Wnj9N_y Lld6j9B1iilEqA6j31e4"
+                    fill="currentColor" title="This user is a verified yEAh employee." viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+                    <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                  </svg>{% endif %} {% if page.verified %}<svg title="This user has been verified as who they state they are." xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 64 64" width="512px"  fill="#ff4747" height="512px"><path d="M32,6C17.641,6,6,17.641,6,32c0,14.359,11.641,26,26,26s26-11.641,26-26C58,17.641,46.359,6,32,6z M45.121,28.121l-13,13 C31.535,41.707,30.768,42,30,42s-1.535-0.293-2.121-0.879l-8-8c-1.172-1.171-1.172-3.071,0-4.242c1.172-1.172,3.07-1.172,4.242,0 L30,34.758l10.879-10.879c1.172-1.172,3.07-1.172,4.242,0C46.293,25.05,46.293,26.95,45.121,28.121z"/></svg>{% endif %}
                   <h3 id="profileUsername" style="font-size:14px;color:#ff4747;padding-bottom:0.3em"></h3>
                   <ul class="gC_jEY75u_oxfOOKnLpH wezTbYJgxYJp5ZDqX67N">
-                    <li
-                      class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 c8dCx6gnV43hTOLV6ks5 _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">
-                      <svg
-                        class="fhCwost7CSNRc2WSHLFW E9GV5sZJIbfO_GEQ_moc _o2IXcpM0qnG3JPReKus __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE"
-                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                          d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
-                          clip-rule="evenodd"></path>
-                        <path
-                          d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z">
-                        </path>
-                      </svg>
-                      Front-end Developer
-                    </li>
                     <li
                       class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 c8dCx6gnV43hTOLV6ks5 _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">
                       <svg
@@ -847,7 +840,7 @@ joindate: 12-09-2023
                           d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                           clip-rule="evenodd"></path>
                       </svg>
-                      San Francisco, USA
+                      <span id="profileLocation"></span>
                     </li>
                   </ul>
                 </div>
@@ -1064,7 +1057,7 @@ joindate: 12-09-2023
                 </div>
               </dl>
             </div>
-           
+
           </div>
 
         </div>
@@ -1164,20 +1157,20 @@ joindate: 12-09-2023
     }
   </script>
   <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var networkSearchInput = document.getElementById("networkSearch");
-  
-    networkSearchInput.addEventListener("keyup", function(event) {
-      if (event.keyCode === 13) {
-        var searchText = networkSearchInput.value.trim();
-        if (searchText !== "") {
-          var encodedSearchText = encodeURIComponent(searchText);
-          var searchUrl = "https://search.yeahgames.net/search/cse/results#gsc.q=" + encodedSearchText;
-          window.location.href = searchUrl;
+    document.addEventListener("DOMContentLoaded", function () {
+      var networkSearchInput = document.getElementById("networkSearch");
+
+      networkSearchInput.addEventListener("keyup", function (event) {
+        if (event.keyCode === 13) {
+          var searchText = networkSearchInput.value.trim();
+          if (searchText !== "") {
+            var encodedSearchText = encodeURIComponent(searchText);
+            var searchUrl = "https://search.yeahgames.net/search/cse/results#gsc.q=" + encodedSearchText;
+            window.location.href = searchUrl;
+          }
         }
-      }
+      });
     });
-  });
   </script>
 
 </body>
