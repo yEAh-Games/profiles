@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+
+<head>
+    <title>yEAh Member Profiles</title>
+    <link rel="icon" href="https://cdn.yeahgames.net/img/branding/logos/default/logo.svg">
+    <link rel="stylesheet" href="https://accounts.yeahgames.net/api/general/accountloader.css">
+    <meta name="robots" content="noindex">
+</head>
+
+<body>
+    <div class="loading-overlay">
+        <div class="loader"></div>
+    </div>
+    
+    <script src="https://accounts.yeahgames.net/system/all/sha256.js"></script>
+    <script src="https://accounts.yeahgames.net/system/validation/main.js"></script>
+    <script>
+        var userData = validateUserDataFromCookie();
+
+        if (userData) {
+            var username = userData.username;
+            var profileURL = 'https://members.yeahgames.net/@' + username;
+            window.location.href = profileURL;
+        } else {
+            var loginURL = 'https://accounts.yeahgames.net/login?continue=https://members.yeahgames.net';
+            window.location.href = loginURL;
+        }
+    </script>
+</body>
+
+</html>
