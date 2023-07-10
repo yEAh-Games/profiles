@@ -11,10 +11,49 @@
   <meta name="theme-color" content="#ff4747">
   <link rel="canonical" href="https://members.yeahgames.net{{page.permalink}}">
   <title>{{page.permalink | remove: '/'}}'s profile | yEAh Accounts</title>
+   
+  <style>
+    .loading {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #0c0e14;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .loader {
+      border: 4px solid #1d1f24;
+      border-top: 4px solid #ff4747;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-
-  <link rel="stylesheet" href="https://accounts.yeahgames.net/api/general/accountloader.css">
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
@@ -331,8 +370,7 @@
                 </p>
                 <p id="ssoUsername"
                   class="c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl vfNYjqjYMlN1XskEucCt EJIoL6514Ry8r7nh011L"
-                  role="none">
-
+                  role="none">Not logged in
                 </p>
               </div>
               <ul class="_bVaO2NfVVP88LtHWYlv" role="none">
@@ -341,12 +379,12 @@
                   role="menuitem">Settings</a>
                 </li>
                 <li>
-                  <a href="httos://members.yeahgames.net/my"
+                  <a href="https://members.yeahgames.net"
                     class="_Vb9igHms0hI1PQcvp_S b9aD6g2qw84oyZNsMO8j RZmKBZs1E1eXw8vkE6jY c8dCx6gnV43hTOLV6ks5 rYHHksRBEMl_guI3q0UQ _7KA5gD55t2lxf9Jkj20 EJIoL6514Ry8r7nh011L RzANcaqunVvlLrO6_tal dMTOiA3mf3FTjlHu6DqW"
                     role="menuitem">Profile</a>
                 </li>
                 <li>
-                  <a href="https://accounts.yeahgames.net/logout?continue=https://members.yeahgames.net/{{page.permalink}}"
+                  <a href="https://accounts.yeahgames.net/logout?continue=https://members.yeahgames.net{{page.permalink}}"
                     class="_Vb9igHms0hI1PQcvp_S b9aD6g2qw84oyZNsMO8j RZmKBZs1E1eXw8vkE6jY c8dCx6gnV43hTOLV6ks5 rYHHksRBEMl_guI3q0UQ _7KA5gD55t2lxf9Jkj20 EJIoL6514Ry8r7nh011L RzANcaqunVvlLrO6_tal dMTOiA3mf3FTjlHu6DqW"
                     role="menuitem">Log out</a>
                 </li>
@@ -513,14 +551,13 @@
             <div
               class="_wYiJGbRZyFZeCc8y7Sf hD0sTTDgbxakubcHVW2X _Ybd3WwuTVljUT4vEaM3 mveJTCIb2WII7J4sY22F mngKhi_Rv06PF57lblDI _YxZw_O8dWkTljptcO7z SWDELhWFjL8JxEtm91_o _1jTZ8KXRZul60S6czNi">
               <div class="rvdRhGyExrNYTA6euxsF xu6Xcz2CnxX04u4eQAne SQf297smyJVNzzOO3iQL LvH1cgobxEYMRPVAp8WW">
-                <img class="TR_P65x9ie7j6uxFo_Cs XO0Hd72IH1CH2AVjcbWM v2F5G_Fm6X1wxdNJdQlJ mveJTCIb2WII7J4sY22F"
-                  id="profileImage" src="https://ugc.yeahgames.net/profile/p/default/png/default.png">
+                <img class="TR_P65x9ie7j6uxFo_Cs XO0Hd72IH1CH2AVjcbWM v2F5G_Fm6X1wxdNJdQlJ mveJTCIb2WII7J4sY22F" src="https://ugc.yeahgames.net/profile/p/default/png/{{page.url|replace:'.html',''|}}.png" onerror="this.onerror=null; this.src='https://ugc.yeahgames.net/profile/p/default/png/default.png';">
                 <div>
                   <h2 class="vyo_A8gnQD1QWDPglr3h IOPhczRgtphv6NdNBDjj OyABRrnTV_kvHV7dJ0uE"><span
-                      id="profileName"></span>&#160;<span id="profileAdmin" style="display: inline-block !important;
+                      id="profileName">{{page.url|replace:'html',''|remove:'/'|remove:'@'}}</span>&#160;<span id="profileAdmin" style="display: inline-block !important;
                     vertical-align: text-top;"></span></h2>
 
-                  <h3 id="profileUsername" style="font-size:14px;color:#ff4747;padding-bottom:0.3em"></h3>
+                  <h3 id="profileUsername" style="font-size:14px;color:#ff4747;padding-bottom:0.3em">{{page.url|replace:'html',''|remove:'/'}}</h3>
                   <ul class="gC_jEY75u_oxfOOKnLpH wezTbYJgxYJp5ZDqX67N">
                     <li
                       class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 c8dCx6gnV43hTOLV6ks5 _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">
@@ -531,7 +568,7 @@
                           d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                           clip-rule="evenodd"></path>
                       </svg>
-                      <span id="profileLocation"></span>
+                      <span id="profileLocation">Ottawa</span>
                     </li>
                   </ul>
                 </div>
@@ -543,14 +580,14 @@
                     <div class="XJih04pKHf8Cekga6Hj3">
                       Email address
                     </div>
-                    <div id="profileEmail"></div>
+                    <div id="profileEmail"><span id="defaultEmail" style="color:#fff">None provided</span></div>
 
                     <div class="XJih04pKHf8Cekga6Hj3">
                       Homepage
                     </div>
                     <div
                       class="TR_P65x9ie7j6uxFo_Cs c8dCx6gnV43hTOLV6ks5 ezMFUVl744lvw6ht0lFe __9sbu0yrzdhGIkLWNXl OyABRrnTV_kvHV7dJ0uE"
-                      id="profileWebsite">
+                      id="profileWebsite">None provided
                     </div>
                   </address>
                 </div>

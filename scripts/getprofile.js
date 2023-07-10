@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   var profileCard = document.getElementById("profile-card");
-  var userProfile; // Declare userProfile variable in the outer scope
+  var userProfile; 
 
-  // Fetch the user's profile data from the JSON database
   fetch("https://accounts.yeahgames.net/data/settings/profiles.json")
     .then(function (response) {
       if (response.ok) {
@@ -12,15 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     })
     .then(function (profileData) {
-      // Retrieve the user's profile based on the permalink (username)
+      
       var permalink = window.location.pathname.replace("/", "");
-      var username = permalink.replace("@", "").replace(".html", ""); // Remove the "@" symbol
+      var username = permalink.replace("@", "").replace(".html", ""); 
       userProfile = profileData.find(function (profile) {
         return profile.username === username;
       });
 
       if (userProfile) {
-        // Fetch the user's account data from the JSON database
         fetch("https://accounts.yeahgames.net/data/accounts.json")
           .then(function (response) {
             if (response.ok) {
@@ -30,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           })
           .then(function (accountData) {
-            // Find the user's account based on the username
             var userAccount = accountData.find(function (account) {
               return account.username === userProfile.username;
             });
@@ -38,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (userAccount) {
               if (userAccount.admin) {
                 userProfile.isAdmin = true;
-                insertAdminHTML(userProfile); // Pass userProfile to the function
+                insertAdminHTML(userProfile); 
               } else {
                 userProfile.isAdmin = false;
               }
@@ -50,20 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             var websiteDiv = '<a style="color:#ff4747" title="This user\'s website." href="' + userProfile.website + '">' + userProfile.website.replace("https://", "") + '</a>'; 
 
-            var img = document.getElementById('profileImage');
-            var url = 'https://ugc.yeahgames.net/profile/p/default/png/@' + userProfile.username + '.png';
-            var defaultUrl = 'https://ugc.yeahgames.net/profile/p/default/png/default.png';
-            img.onerror = function () {
-              img.src = defaultUrl;
-            };
-
-            img.src = url;
-
             var profileNameElement = document.getElementById('profileName');
             profileNameElement.innerHTML = userProfile.name;
-
-            var profileUsernameElement = document.getElementById('profileUsername');
-            profileUsernameElement.textContent = '@' + userProfile.username;
 
             var profileAboutElement = document.getElementById('profileAbout');
             profileAboutElement.textContent = userProfile.about;
