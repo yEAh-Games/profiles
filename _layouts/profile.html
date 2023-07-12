@@ -11,7 +11,13 @@
   <meta name="theme-color" content="#ff4747">
   <link rel="canonical" href="https://members.yeahgames.net{{page.permalink}}">
   <title>{{page.permalink | remove: '/'}}'s profile | yEAh Accounts</title>
-   
+
+  <script>
+    if (!localStorage.getItem("sidebarExpanded")) {
+      localStorage.setItem("sidebarExpanded", "false");
+    }
+  </script>
+
   <style>
     .loading {
       display: none;
@@ -58,7 +64,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="../../app.css">
+  <link rel="stylesheet" href="https://dashboard.yeahgames.net/api/static/css/app.css">
   <link rel="apple-touch-icon" href="https://cdn.yeahgames.net/img/branding/logos/default/logo.svg">
   <link rel="icon" href="https://cdn.yeahgames.net/img/branding/logos/default/logo.svg">
 
@@ -551,13 +557,17 @@
             <div
               class="_wYiJGbRZyFZeCc8y7Sf hD0sTTDgbxakubcHVW2X _Ybd3WwuTVljUT4vEaM3 mveJTCIb2WII7J4sY22F mngKhi_Rv06PF57lblDI _YxZw_O8dWkTljptcO7z SWDELhWFjL8JxEtm91_o _1jTZ8KXRZul60S6czNi">
               <div class="rvdRhGyExrNYTA6euxsF xu6Xcz2CnxX04u4eQAne SQf297smyJVNzzOO3iQL LvH1cgobxEYMRPVAp8WW">
-                <img class="TR_P65x9ie7j6uxFo_Cs XO0Hd72IH1CH2AVjcbWM v2F5G_Fm6X1wxdNJdQlJ mveJTCIb2WII7J4sY22F" src="https://ugc.yeahgames.net/profile/p/default/png/{{page.url|replace:'.html',''|}}.png" onerror="this.onerror=null; this.src='https://ugc.yeahgames.net/profile/p/default/png/default.png';">
+                <img class="TR_P65x9ie7j6uxFo_Cs XO0Hd72IH1CH2AVjcbWM v2F5G_Fm6X1wxdNJdQlJ mveJTCIb2WII7J4sY22F"
+                  src="https://ugc.yeahgames.net/profile/p/default/png/{{page.url|replace:'.html',''|}}.png"
+                  onerror="this.onerror=null; this.src='https://ugc.yeahgames.net/profile/p/default/png/default.png';">
                 <div>
                   <h2 class="vyo_A8gnQD1QWDPglr3h IOPhczRgtphv6NdNBDjj OyABRrnTV_kvHV7dJ0uE"><span
-                      id="profileName">{{page.url|replace:'html',''|remove:'/'|remove:'@'}}</span>&#160;<span id="profileAdmin" style="display: inline-block !important;
+                      id="profileName">{{page.url|replace:'html',''|remove:'/'|remove:'@'}}</span>&#160;<span
+                      id="profileAdmin" style="display: inline-block !important;
                     vertical-align: text-top;"></span></h2>
 
-                  <h3 id="profileUsername" style="font-size:14px;color:#ff4747;padding-bottom:0.3em">{{page.url|replace:'html',''|remove:'/'}}</h3>
+                  <h3 id="profileUsername" style="font-size:14px;color:#ff4747;padding-bottom:0.3em">
+                    {{page.url|replace:'html',''|remove:'/'}}</h3>
                   <ul class="gC_jEY75u_oxfOOKnLpH wezTbYJgxYJp5ZDqX67N">
                     <li
                       class="YRrCJSr_j5nopfm4duUc Q_jg_EPdNf9eDMn1mLI2 c8dCx6gnV43hTOLV6ks5 _43MO1gcdi2Y0RJW1uHL PeR2JZ9BZHYIH8Ea3F36 XIIs8ZOri3wm8Wnj9N_y">
@@ -722,7 +732,7 @@
 
 
 
-  <script src="../../app.bundle.js"></script>
+  <script src="https://dashboard.yeahgames.net/api/static/js/app.bundle.js"></script>
   <script src="/scripts/getprofile.js"></script>
   <script src="https://accounts.yeahgames.net/system/all/sha256.js" defer></script>
   <script src="https://accounts.yeahgames.net/system/validation/main.js" defer></script>
