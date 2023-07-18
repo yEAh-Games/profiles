@@ -1,3 +1,8 @@
+PATH
+  remote: _plugins/remote_include
+  specs:
+    remote_include (1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -88,6 +93,7 @@ DEPENDENCIES
   jekyll
   jekyll-sitemap
   jemoji
+  remote_include!
   rouge
 
 BUNDLED WITH

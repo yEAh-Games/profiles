@@ -1,0 +1,33 @@
+name: Build & deploy dashboard
+
+on:
+  push:
+    branches:
+      - main 
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-20.04 
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: true
+
+      - name: Authorize yEAh bot
+        run: |
+          git config --global user.email "bot@yeahgames.net"
+          git config --global user.name "yeahrobot"
+
+      - name: Build & deploy dashboard
+        uses: jeffreytse/jekyll-deploy-action@v0.3.1
+        with:
+          provider: 'github'
+          token: ${{ secrets.GITHUB_TOKEN }} 
+          jekyll_src: './' 
+          jekyll_cfg: '_config.yml' 
+          jekyll_baseurl: '' 
+          cname: 'settings.yeahgames.net'
+          commit_message: 'Publishing custom dashboard framework to site'
+
+permissions:
+  contents: write
