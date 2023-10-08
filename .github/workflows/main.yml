@@ -26,7 +26,7 @@ jobs:
           jekyll_src: './' 
           jekyll_cfg: '_config.yml' 
           jekyll_baseurl: '' 
-          cname: 'members.yeahgames.net'
+          cname: 'members.ynwk.org'
           commit_message: 'Publishing custom dashboard framework to site'
 
 permissions:
