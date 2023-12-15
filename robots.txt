@@ -1,0 +1,8 @@
+Sitemap: https://members.yeahgames.net/sitemap.xml
+
+User-agent: *
+Disallow: /dash
+Disallow: /dash/*
+Disallow: /cdn-cgi/
+Disallow: /cdn-cgi
+Disallow: /cdn-cgi/*

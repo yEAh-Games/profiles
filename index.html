@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+
+<head>
+    <title>yEAh Member Profiles</title>
+    <link rel="icon" href="https://cdn.yeahgames.net/img/branding/logos/default/logo.svg">
+    <style>
+        .loading {
+          display: none;
+          margin-top: 20px;
+          text-align: center;
+          color: white;
+        }
+    
+        .loading-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #0c0e14;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          z-index: 9999;
+        }
+    
+        .loader {
+          border: 4px solid #1d1f24;
+          border-top: 4px solid #ff4747;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          animation: spin 1s linear infinite;
+        }
+    
+        @keyframes spin {
+          0% {
+            transform: rotate(0deg);
+          }
+    
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      </style>
+</head>
+
+<body>
+    <div class="loading-overlay">
+        <div class="loader"></div>
+    </div>
+
+    <script src="https://accounts.yeahgames.net/system/all/sha256.js"></script>
+    <script src="https://accounts.yeahgames.net/system/validation/main.js"></script>
+    <script>
+        var userData = validateUserDataFromCookie();
+
+        if (userData) {
+            var username = userData.username;
+            var profileURL = 'https://members.yeahgames.net/@' + username;
+            window.location.href = profileURL;
+        } else {
+            var loginURL = 'https://accounts.yeahgames.net/login?continue=https://members.yeahgames.net';
+            window.location.href = loginURL;
+        }
+    </script>
+</body>
+
+</html>
